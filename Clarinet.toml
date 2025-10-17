@@ -1,0 +1,23 @@
+[project]
+name = 'orangecoin'
+description = 'OrangeCoin (ORANGE) - A SIP-010 compliant fungible token on Stacks'
+authors = ['Anthony <anthony@orangecoin.io>']
+telemetry = true
+cache_dir = './.cache'
+requirements = []
+[contracts.orangecoin]
+path = 'contracts/orangecoin.clar'
+clarity_version = 3
+epoch = 'latest'
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
